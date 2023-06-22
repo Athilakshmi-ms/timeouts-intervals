@@ -46,7 +46,7 @@ function typewriterfunc() {
         } else {
             clearInterval(interval);
         }
-    }, 1000);
+    }, 1000); // <-setInterval(function,time delay)
 }
 typewriterfunc();
 //-------------------------------------------------------------
@@ -56,23 +56,23 @@ The display should be refreshed every second.
 If 60 seconds are elapsed, write "a minute has passed", then "2 minutes have passed" (for 120 seconds and more), etc.*/
 
 function displaySecondsPassed() {
-   let seconds = 0;
- 
-   setInterval(() => {
-     seconds++;
- 
-     if (seconds % 60 === 0) {
-       const minutes = seconds / 60;
-       if (minutes === 1) {
-         console.log("A minute has passed.");
-       } else {
-         console.log(`${minutes} minutes have passed.`);
-       }
-     } else {
-       console.log(`${seconds} seconds have passed.`);
-     }
-   }, 1000); 
- }
- 
- // Call the function to start displaying seconds passed
- displaySecondsPassed();
+    let seconds = 0;
+
+    setInterval(() => {
+        seconds++;
+
+        if (seconds % 60 === 0) {
+            const minutes = seconds / 60;
+            if (minutes === 1) {
+                console.log("A minute has passed.");
+            } else {
+                console.log(`${minutes} minutes have passed.`);
+            }
+        } else {
+            console.log(`${seconds} seconds have passed.`);
+        }
+    }, 1000);
+}
+
+// Call the function to start displaying seconds passed
+displaySecondsPassed();
